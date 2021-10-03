@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Votre outil préféré de cryptage par Chloé, Quentin et Florent" Height="450" Width="800">
+    <Grid Background="#FFFFFF">
+        <Label Content="(De)Code" HorizontalAlignment="Center" FontSize="32" />
+        <Button Content="Encoder" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Width="108" Height="34" Click="ButtonBase_OnClick" ClickMode="Press"/>
+        <Label Content="Le texte que vous souhaitez crypter" HorizontalAlignment="Left" Margin="120,96,0,0" VerticalAlignment="Top" Height="26" Width="200" RenderTransformOrigin="0.402,0.532"/>
+        <Label Content="Votre texte crypté" HorizontalAlignment="Left" Margin="587,110,0,0" VerticalAlignment="Top" Height="26" Width="114" RenderTransformOrigin="0.479,2.909"/>
+        <TextBox Name="Input" HorizontalAlignment="Left" Height="100" Margin="127,159,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150">Entrez votre texte</TextBox>
+        <TextBox Name="Output" HorizontalAlignment="Left" Height="100" Margin="569,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="150">Ici s'affichera votre texte crypté</TextBox>
+        <TextBox Name="Key" HorizontalAlignment="Left" Height="50" Margin="327,300,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="150">Votre clé (concerne uniquement la méthode Vigenere)</TextBox>
+
+        <ComboBox Name="ComboBox1" HorizontalAlignment="Left" Height="29" Margin="319,167,0,0" VerticalAlignment="Top" Width="180" SelectedIndex="0">
+            <ComboBoxItem>Chiffrement César</ComboBoxItem>
+            <ComboBoxItem>Chiffrement Binaire</ComboBoxItem>
+            <ComboBoxItem>Chiffrement Vigenère </ComboBoxItem>
+        </ComboBox>
+
+    </Grid>
+</Window>
