@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="Votre outil préféré de cryptage par Chloé, Quentin et Florent" Height="450" Width="800">
-    <Grid Background="#FFFFFF">
+    <Grid Background="#D3D3D3">
         <Label Content="(De)Code" HorizontalAlignment="Center" FontSize="32" />
         <Button Content="Encoder" HorizontalAlignment="Center" Margin="0,227,0,0" VerticalAlignment="Top" Width="108" Height="34" Click="ButtonBase_OnClick" ClickMode="Press"/>
         <Label Content="Le texte que vous souhaitez crypter" HorizontalAlignment="Left" Margin="120,96,0,0" VerticalAlignment="Top" Height="26" Width="200" RenderTransformOrigin="0.402,0.532"/>
