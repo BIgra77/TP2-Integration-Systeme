@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Printing;
@@ -30,17 +30,29 @@ namespace WpfApp1
         {
             try
             {
-                if (ComboBox1.SelectedIndex == 0)
+                if (ChoixCryptage.SelectedIndex == 0 && Decypher.IsChecked == false)
                 {
                     Output.Text = cipher.Cesar(Input.Text);
                 }
-                else if (ComboBox1.SelectedIndex == 1)
+                else if (ChoixCryptage.SelectedIndex == 1 && Decypher.IsChecked == false)
                 {
                     Output.Text = cipher.Binary(Input.Text);
                 }
-                else if (ComboBox1.SelectedIndex == 2)
+                else if (ChoixCryptage.SelectedIndex == 2 && Decypher.IsChecked == false)
                 {
-                    Output.Text = cipher.VigenèreCipher(Input.Text,Key.Text);
+                    Output.Text = cipher.VigenèreCypher(Input.Text,Key.Text);
+                }
+                else if (ChoixCryptage.SelectedIndex == 0 && Decypher.IsChecked == true)
+                {
+                    Input.Text = decypher.DeCesar(Output.Text);
+                }
+                else if (ChoixCryptage.SelectedIndex == 1 && Decypher.IsChecked == true)
+                {
+                    Input.Text = decypher.DeBinary(Output.Text);
+                }
+                else if (ChoixCryptage.SelectedIndex == 2 && Decypher.IsChecked == true)
+                {
+                    Input.Text = decypher.DeVigenèreCypher(Output.Text, Key.Text);
                 }
             }
             catch (Exception exception)
